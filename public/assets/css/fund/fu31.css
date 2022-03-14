@@ -1,0 +1,26 @@
+.content {
+  text-align: center;
+}
+.content h1 {
+  font-size: 2.4rem;
+  border-bottom: 1px solid #BB353F;
+  width: 19rem;
+  margin: 6.4rem auto;
+}
+.content p {
+  font-size: 1.8rem;
+  margin-bottom: 6rem;
+}
+.content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  height: 7rem;
+  border: .2rem solid #BB353F;
+  margin: 0 auto;
+  border-radius: .5rem;
+  font-size: 2rem;
+  color: #BB353F;
+  font-weight: bold;
+}

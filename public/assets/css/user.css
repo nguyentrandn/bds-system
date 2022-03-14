@@ -1,0 +1,1248 @@
+@charset "utf-8";
+
+/* --------------------------------
+	user common
+-------------------------------- */
+.inner {
+	padding: 0 12rem;
+}
+
+@media (max-width: 768px) {
+	.inner {
+		padding: 0 2rem;
+	}
+}
+
+/* --- mv --- */
+.secTtl {
+	padding: 6rem 0 5rem;
+	color: #000;
+	font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+	font-size: 2.4rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.secTtl > span {
+	display: block;
+	color: #BB353F;
+	font-family: 'Abel', sans-serif;
+	font-weight: 300;
+}
+
+.mv .pageTtl {
+	margin-bottom: 5rem;
+	line-height: 1;
+}
+.mv .pageTtl::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin-left: -9.5rem;
+	width: 19rem;
+	height: 0.1rem;
+	border-bottom: 0.1rem solid #BB353F;
+}
+
+section {
+	margin: 5rem auto;
+}
+
+section:nth-of-type(1) {
+	margin-top: 8rem;
+}
+
+section h3 {
+	font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+	font-size: 2.4rem;
+	font-weight: 600;
+	line-height: 2;
+	border-bottom: .1rem solid #BB353F;
+}
+
+section h3 > span.data {
+	display: block;
+	margin: 1rem 0 2rem;
+	font-family: initial;
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
+@media (max-width: 768px) {
+	section {
+		margin: 5rem auto 0;
+	}
+	.secTtl {
+		padding: 3rem 0 3rem;
+	}
+
+	section:nth-of-type(1) {
+		margin-top: 0;
+	}
+}
+
+/* --- message --- */
+.message {
+	position: relative;
+}
+
+.message .btn.more {
+	margin: auto;
+	margin-top: 3rem;
+	height: 3rem;
+	font-size: 1.4rem;
+}
+
+@media (min-width: 769px) {
+	.message .btn.more {
+		margin-right: 0;
+		width: 32rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.message h3 {
+		margin-bottom: 1.5rem;
+	}
+
+	.message .btn.more {
+		margin-top: 2.5rem;
+		font-size: 1.8rem;
+		height: 5rem;
+	}
+}
+
+/* messageList */
+.message .messageList .sort {
+	position: absolute;
+	top: 1.2rem;
+	right: 0;
+	display: inline-block;
+	padding-left: calc(1rem + 1.8rem);
+	width: auto;
+	font-size: 1.4rem;
+	cursor: auto;
+}
+
+.message .messageList .sort::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 1.8rem;
+	height: 1.8rem;
+	background: #fff;
+	margin-top: -.9rem;
+	border: .1rem solid #878783;
+	border-radius: .3rem;
+}
+
+.message .messageList .sort::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -0.65rem;
+	margin-left: 0.6rem;
+	width: .6rem;
+	height: 1rem;
+	border-right: .2rem solid #BB353F;
+	border-bottom: .2rem solid #BB353F;
+	transform: rotate(45deg);
+	opacity: 0;
+}
+
+.message .messageList .sort.on::after {
+	opacity: 1;
+}
+
+.message .messageList ul {
+	color: #333;
+}
+
+.message .messageList ul li {
+	margin-top: 3.5rem;
+}
+
+.message .messageList ul li a {
+	display: inline-flex;
+	font-weight: 600;
+}
+
+.message .messageList ul li a:hover > span {
+	text-decoration: underline;
+}
+
+.message .messageList ul li .date {
+	margin-right: 3rem;
+	width: 21rem;
+	font-weight: 600;
+}
+
+.message .messageList ul li.visited a {
+	font-weight: 300;
+}
+
+.message .messageList ul li.dm .date {
+	position: relative;
+}
+
+.message .messageList ul li.dm .date::before {
+	content: "DM";
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -1.15rem;
+	width: 4.6rem;
+	height: 2.3rem;
+	color: #fff;
+	background-color: #BB353F;
+	font-size: 1.2rem;
+	border-radius: .3rem;
+}
+
+@media (max-width: 768px) {
+	.message .messageList .sort {
+		position: relative;
+		top: -1rem;
+	}
+
+	.message .messageList ul li {
+		margin-top: 0;
+		margin-bottom: 1.3rem;
+		padding-bottom: 1.3rem;
+		border-bottom: .1rem solid #C4C4C4;
+	}
+
+	.message .messageList ul li .date {
+		margin-right: 0;
+		padding-right: 6rem;
+		width: 100%;
+	}
+
+	.message .messageList ul li.dm .date::before {
+		margin-left: 2rem;
+		margin-top: -1.05rem;
+		height: 2rem;
+	}
+
+	.message .messageList ul li a {
+		flex-direction: column;
+	}
+
+	.message .messageList ul li .ttl {
+		width: 100%;
+	}
+}
+
+/* --- operation --- */
+.operation {
+	font-size: 1.6rem;
+}
+
+.operation .dataTtl {
+	margin-right: 4rem;
+}
+
+
+/* field */
+.operation .wrap {
+	display: flex;
+	justify-content: space-between;
+}
+
+img.ui-datepicker-trigger {
+	position: relative;
+	cursor: pointer;
+	margin-left: -3.15rem;
+	padding-right: 0.7rem;
+	width: 2.5rem;
+	vertical-align: middle;
+	box-sizing: content-box;
+}
+
+.operation .wrap .field input,
+.operation .wrap .field select {
+	padding: 0.3rem 1rem;
+	height: 4rem;
+	color: #7B7B7B;
+	background-color: #fff;
+	background-clip: padding-box;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	border: .1rem solid #878783;
+	border-radius: 0.3rem;
+}
+
+.operation .wrap .field select {
+	width: 34.5rem;
+}
+
+.operation .dataTtl {
+	font-weight: 600;
+}
+
+@media (max-width: 768px) {
+	.operation .wrap {
+		flex-direction: column;
+	}
+
+	.operation .wrap > p + p {
+		margin-top: 3rem;
+	}
+
+	.operation .dataTtl + * {
+		display: block;
+		margin-top: .5rem;
+	}
+
+	.operation .dataTtl + span > .calendar {
+		width: 15.6rem;
+	}
+
+	.operation .buttons {
+		margin-top: 3.4rem;
+	}
+
+	img.ui-datepicker-trigger {
+		margin-left: -2.5rem;
+		padding-right: 0.5rem;
+		width: 2rem;
+	}
+}
+
+/* radio */
+.operation .wrap .radio input + label{
+	padding-left: 2.3rem;
+	position:relative;
+	margin-right: 1.5rem;
+	font-size: 1.4rem;
+}
+
+.operation .wrap .radio input + label::before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -.7rem;
+	width: 1.4rem;
+	height: 1.4rem;
+	border: .1rem solid #999;
+	border-radius: 50%;
+}
+
+.operation .wrap .radio input:checked + label::after{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -.4rem;
+	margin-left: .3rem;
+	width: .8rem;
+	height: .8rem;
+	background: #000;
+	border-radius: 50%;
+}
+
+/* buttons */
+.operation .buttons {
+	display: flex;
+	justify-content: center;
+	margin-top: 4.5rem;
+}
+
+.operation .buttons .btn {
+	margin: 0;
+	width: 14.5rem;
+	height: 4rem;
+	font-size: 1.4rem;
+}
+
+.operation .buttons .btn + .btn {
+	margin-left: 2rem;
+}
+
+.operation .buttons .clear {
+	color: #fff;
+	background-color: #C3C3C3;
+	border: .2rem solid #C3C3C3;
+}
+
+/* --- infoTable --- */
+.infoTable {
+	margin-top: 6rem;
+	width: 100%;
+	font-size: 1.4rem;
+}
+.infoTable a{
+	text-decoration: underline;
+}
+.infoTable tr > * {
+	padding: 2rem;
+}
+
+.infoTable tr th {
+	text-align: center;
+	color: #fff;
+	background-color: #BB353F;
+	vertical-align: middle;
+}
+
+.infoTable tr td {
+	vertical-align: middle;
+}
+
+.infoTable tr td > span {
+	display: block;
+	color: #6F6F6F;
+}
+
+@media (min-width: 769px) {
+	.infoTable .pc {
+		display: table-row!important;
+		text-align: center!important;
+	}
+
+	.infoTable tr td {
+		background-color: #F6F6F6;
+	}
+
+	.infoTable tr:nth-of-type(n+2) {
+		border-bottom: .1rem solid #D6D6D6;
+	}
+
+	.infoTable tr > *:nth-of-type(n+2) {
+		border-left: .1rem solid #D6D6D6;
+	}
+
+
+	/* in */
+	.infoTable tr.in td.price {
+		color: #BB353F;
+	}
+
+	.infoTable tr.in td.tag p {
+		background-color: #BB353F;
+		color: #fff;
+		border-radius: 1rem;
+		padding: 0.4rem;
+		text-align: center;
+	}
+
+	/* out */
+	.infoTable tr.out td.price {
+		color: #006711;
+	}
+
+	.infoTable tr.out td.tag p {
+		background-color: #006711;
+		color: #fff;
+		border-radius: 1rem;
+		padding: 0.4rem;
+		text-align: center;
+	}
+}
+
+@media (max-width: 768px) {
+	.infoTable {
+		margin-top: 4.5rem;
+	}
+
+	.infoTable tr {
+		display: block;
+		position: relative;
+		margin-bottom: 1.3rem;
+		padding-bottom: 1.3rem;
+		border-bottom: .1rem solid #C4C4C4;
+	}
+
+	.infoTable tr * {
+		display: block;
+		padding: 0;
+	}
+
+	.infoTable tr td.tag {
+		position: absolute;
+		top: 0;
+		left: 12rem;
+	}
+
+	.infoTable tr td.tag {
+		position: absolute;
+		top: 0;
+		left: 12rem;
+		width: 4.6rem;
+		padding: .2rem 0 .1rem;
+		color: #fff;
+		font-size: 1.2rem;
+		text-align: center;
+		border-radius: .3rem;
+	}
+
+	.infoTable tr td.about {
+		position: absolute;
+		bottom: 1.3rem;
+	}
+
+	.infoTable tr td.item {
+		margin: .5rem 0 .3rem;
+	}
+
+	/* in */
+	.infoTable tr.in td.price {
+		color: #BB353F;
+	}
+
+	.infoTable tr.in td.tag {
+		background-color: #BB353F;
+	}
+
+	/* out */
+	.infoTable tr.out td.price {
+		color: #006711;
+	}
+
+	.infoTable tr.out td.tag {
+		background-color: #006711;
+	}
+}
+
+/* btn */
+form .btn {
+	margin-top: 6rem;
+}
+
+@media (max-width: 768px) {
+
+}
+
+/* --------------------------------
+	MY10
+-------------------------------- */
+/* confirmation
+-------------------------------- */
+.MY10 .confirmation {
+	margin: 0 auto 11rem;
+	padding: 4rem 3rem;
+	width: 97rem;
+	background-color: #FFE4E6;
+	font-size: 1.4rem;
+	text-align: center;
+}
+
+.MY10 .confirmation h2 {
+	margin-bottom: 3rem;
+	font-size: 2.4rem;
+}
+
+.MY10 .confirmation p.txtCenter {
+	text-align: center;
+	font-size: 1.8rem;
+	padding-bottom: 20px;
+}
+
+.MY10 .confirmation .inputBox {
+	display: inline-block;
+	margin: 4rem auto 2rem;
+	width: auto;
+	text-align: center;
+}
+
+.MY10 .confirmation label {
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.MY10 .confirmation input {
+	padding: 1.2rem 2.4rem;
+	width: 30rem;
+	min-height: 5rem;
+	background-color: #fff;
+	background-clip: padding-box;
+	font-weight: 400;
+	line-height: 1.5;
+	border: 0.1rem solid #878783;
+	border-radius: 0.3rem;
+}
+
+.MY10 .confirmation .btn {
+	width: 30rem;
+	height: 5rem;
+}
+
+@media (min-width: 769px) {
+	.MY10 .confirmation .inputBox {
+		margin-left: -16.5rem;
+	}
+
+	.MY10 .confirmation input {
+		margin-left: 3rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.MY10 .confirmation {
+		margin: 0 auto 4rem;
+		padding: 3rem 2rem;
+		width: 35rem;
+	}
+
+	.MY10 .confirmation h2 {
+		margin-bottom: 2rem;
+		font-size: 1.8rem;
+	}
+
+	.MY10 .confirmation .inputBox {
+		margin: 2rem auto 2rem;
+	}
+
+	.MY10 .alert .box {
+		padding: 4rem 2rem;
+	}
+}
+
+/* --- status --- */
+.MY10 .status ul {
+	margin-top: 2.5rem
+}
+
+.MY10 .status ul li {
+	display: flex;
+	justify-content: space-between;
+	min-height: 11rem;
+	border: .1rem solid #898989;
+}
+
+.MY10 .status ul li .itemTtl {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 17.4rem;
+	color: #fff;
+	background-color: #BB353F;
+	text-align: center;
+}
+
+.MY10 .status ul li .item {
+	margin: auto;
+	padding: 1.2rem;
+	text-align: right;
+}
+
+.MY10 .status ul li .item a {
+	display: inline-block;
+	margin-top: 1rem;
+	font-size: 1.4rem;
+	color: #BB353F;
+	text-decoration: underline;
+}
+
+@media (min-width: 769px) {
+	.MY10 .status ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.MY10 .status ul li {
+		width: calc((100% - 3rem) / 3);
+	}
+
+	.MY10 .status ul li .itemTtl {
+		height: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.MY10 .status ul li {
+		min-height: 11rem;
+	}
+
+	.MY10 .status ul li + li {
+		margin-top: 2.2rem;
+	}
+	
+	.MY10 .status ul li .itemTtl {
+		width: 15.6rem;
+	}
+
+	.MY10 .status ul li .item {
+		font-size: 1.8rem;
+	}
+}
+
+/* --- informations --- */
+.MY10 .informations .btn {
+	margin: 0;
+	margin-top: 2.5rem;
+	width: 35rem;
+	height: 5.8rem;
+	font-size: 1.8rem;
+}
+
+@media (min-width: 769px) {
+	.MY10 .informations .btnWrap {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+
+/* --------------------------------
+	MY20
+-------------------------------- */
+@media (max-width: 768px) {
+	.MY20 .infoTable tr > *:nth-of-type(5) {
+		text-align: right;
+	}
+}
+
+@media (min-width: 769px) {
+	.MY20 .infoTable tr .price {
+		text-align: right;
+	}
+}
+
+/* --------------------------------
+	MY30
+-------------------------------- */
+.MY30 .infoTable td.price1,.MY30 .infoTable td.price2,.MY30 .infoTable td.price3,.MY30 .infoTable td.price4,.MY30 .infoTable td.price5{
+	text-align: right;
+}
+
+.MY30 .infoTable + .note {
+	margin-top: 2rem;
+	font-size: 1.4rem;
+	font-weight: 600;
+	letter-spacing: .05em;
+}
+
+@media (min-width: 769px) {
+	.MY30 .infoTable tr.active td:nth-child(1) p{
+		background-color: #BB353F;
+		color: #fff;
+		border-radius: 1rem;
+		padding: 0.4rem;
+		text-align: center;
+	}
+
+	.MY30 .infoTable tr.fin td:nth-child(1) p{
+		background-color: #8A8A8A;
+		color: #fff;
+		border-radius: 1rem;
+		padding: 0.4rem;
+		text-align: center;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.MY30 .mv .pageTtl {
+		margin-bottom: 3rem;
+	}
+
+	.MY30 .infoTable tr {
+		margin-bottom: 1.8rem;
+	}
+
+	.MY30 .infoTable tr td:nth-child(1) {
+		margin-bottom: .5rem;
+		padding: .4rem 0 .3rem;
+		width: 7.6rem;
+		color: #fff;
+		border-radius: .3rem;
+		text-align: center;
+		line-height: 1;
+	}
+
+
+	.MY30 .infoTable tr.active td:nth-child(1) {
+		background-color: #BB353F;
+	}
+
+	.MY30 .infoTable tr.fin td:nth-child(1) {
+		background-color: #8A8A8A;
+	}
+
+	.MY30 .infoTable tr td:nth-child(2) {
+		font-weight: 600;
+	}
+
+	.MY30 .infoTable tr td:nth-child(n+3) {
+		margin-top: .5rem;
+	}
+
+	.MY30 .infoTable tr td:nth-child(n+3):before {
+		position: absolute;
+		left: 0;
+	}
+
+	.MY30 .infoTable tr .price1::before {
+		content: "投資金額";
+	}
+
+	.MY30 .infoTable tr .price2::before {
+		content: "分配金合計（税引前）";
+	}
+	
+	.MY30 .infoTable tr .price3::before {
+		content: "源泉調整額";
+	}
+
+	.MY30 .infoTable tr .price4::before {
+		content: "分配金合計（税引後）";
+	}
+
+	.MY30 .infoTable tr .price5::before {
+		content: "償還金合計";
+	}
+
+	.MY30 .infoTable + .note {
+		margin-top: 0;
+	}
+}
+
+
+/* --------------------------------
+	MY40
+-------------------------------- */
+.MY40 .infoTable tr > *:nth-of-type(1) {
+	width: 13rem;
+}
+
+.MY40 .infoTable tr > *:nth-of-type(2),
+.MY40 .infoTable tr > *:nth-of-type(3) {
+	width: 12.5rem;
+}
+
+.MY40 .infoTable tr > *:nth-of-type(4) {
+	width: 12.5rem;
+}
+
+.MY40 .infoTable tr > *:nth-of-type(5) {
+	width: 35.5rem;
+}
+
+.MY40 .infoTable tr > *:nth-of-type(7) {
+	width: 18rem;
+}
+
+.MY40 .infoTable tr > td:nth-of-type(7) {
+	text-align: right;
+}
+
+@media (min-width: 769px) {
+	.MY40 .infoTable tr td.tag.yet p{
+		background-color: #BB353F;
+		color: #fff;
+		border-radius: 1rem;
+		padding: 0.4rem;
+		text-align: center;
+	}
+
+	.MY40 .infoTable tr td.tag.ok p{
+		background-color: #006711;
+		color: #fff;
+		border-radius: 1rem;
+		padding: 0.4rem;
+		text-align: center;
+	}
+
+	.MY40 .infoTable tr td.tag.cancel p{
+		background-color: #8A8A8A;
+		color: #fff;
+		border-radius: 1rem;
+		padding: 0.4rem;
+		text-align: center;
+	}
+
+	.MY40 .infoTable tr td.status.yet {
+		color: #BB353F;
+	}
+
+	.MY40 .infoTable tr td.status.ok {
+		color: #006711;
+	}
+}
+
+@media (max-width: 768px) {
+	.MY40 .infoTable tr > td:nth-of-type(n+2):not(.name) {
+		margin-top: 0.5rem;
+		width: 100%;
+		text-align: right;
+	}
+
+	.MY40 .infoTable tr > td:nth-of-type(n+2):not(.name)::before {
+		position: absolute;
+		left: 0;
+	}
+
+	.MY40 .infoTable tr > td:nth-of-type(2)::before {
+		content: "申込日";
+	}
+	
+	.MY40 .infoTable tr > td:nth-of-type(3)::before {
+		content: "抽選日";
+	}
+
+	.MY40 .infoTable tr > td:nth-of-type(4)::before {
+		content: "ファンドステータス";
+		color: initial;
+	}
+
+	.MY40 .infoTable tr > td:nth-of-type(6)::before {
+		content: "入金期限";
+	}
+
+	.MY40 .infoTable tr > td:nth-of-type(7)::before {
+		content: "投資金額（申込口数/総口数）";
+	}
+
+	.MY40 .infoTable tr td.tag {
+		margin-bottom: 3.5em;
+		position: unset;
+		width: 7.5rem;
+	}
+
+	.MY40 .infoTable tr td.name {
+		position: absolute;
+		top: 2.3em;
+		font-weight: bold;
+	}
+	
+	.MY40 .infoTable tr td.tag.yet {
+		background-color: #BB353F;
+	}
+
+	.MY40 .infoTable tr td.tag.ok {
+		background-color: #006711;
+	}
+
+	.MY40 .infoTable tr td.tag.cancel {
+		background-color: #8A8A8A;
+	}
+
+	.MY40 .infoTable tr td.status.yet {
+		color: #BB353F;
+	}
+
+	.MY40 .infoTable tr td.status.ok {
+		color: #006711;
+	}
+}
+
+
+/* --------------------------------
+	MY50
+-------------------------------- */
+.MY50 .infoTable tr > *:nth-of-type(1) {
+	width: 13rem;
+}
+
+.MY50 .infoTable tr > *:nth-of-type(3) {
+	width: 20rem;
+}
+
+.MY50 .infoTable tr > *:nth-of-type(4),
+.MY50 .infoTable tr > *:nth-of-type(5) {
+	text-align: right;
+}
+
+.MY50 .infoTable tr td .compBtn {
+	display: none;
+	margin: 0 auto;
+	padding: .5rem;
+	width: 12rem;
+	color: #fff;
+	background-color: #605F5F;
+	line-height: 1;
+	border-radius: .5rem;
+}
+
+.MY50 .infoTable tr.typeApp td .compBtn {
+	display: block;
+}
+
+.MY50 .alert .box p {
+	margin: 4rem 0 5rem;
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.MY50 .alert .box .buttons > *,
+.MY50 .alert .box .singleButton {
+	transition: opacity 0.2s ease-out;
+}
+
+.MY50 .alert .box .buttons > *:hover,
+.MY50 .alert .box .singleButton:hover {
+	opacity: 0.7;
+}
+
+.MY50 .alert .box p > span {
+	display: inline-block;
+	margin-left: 6.5rem;
+	font-weight: 300;
+}
+
+
+@media (min-width: 769px) {
+	.MY50 .infoTable tr td.tag.yet p{
+		background-color: #BB353F;
+		color: #fff;
+		border-radius: 1rem;
+		padding: 0.4rem;
+		text-align: center;
+	}
+
+	.MY50 .infoTable tr td.tag.win p{
+		background-color: #006711;
+		color: #fff;
+		border-radius: 1rem;
+		padding: 0.4rem;
+		text-align: center;
+	}
+
+	.MY50 .infoTable tr td.tag.lost p{
+		background-color: #000;
+		color: #fff;
+		border-radius: 1rem;
+		padding: 0.4rem;
+		text-align: center;
+	}
+
+	.MY50 .infoTable tr td.tag.cancel p{
+		background-color: #8A8A8A;
+		color: #fff;
+		border-radius: 1rem;
+		padding: 0.4rem;
+		text-align: center;
+	}
+
+}
+
+
+
+@media (max-width: 769px) {
+	.MY50 .infoTable tr > td:nth-of-type(n+2) {
+		width: 100%;
+	}
+
+	.MY50 .infoTable tr > td:nth-of-type(n+2):not(.name) {
+		margin-top: 0.5rem;
+		text-align: right;
+	}
+
+	.MY50 .infoTable tr > td:nth-of-type(n+2):not(.name)::before {
+		position: absolute;
+		left: 0;
+	}
+
+	.MY50 .infoTable tr > td:nth-of-type(2)::before {
+		content: "申込日";
+	}
+	
+	.MY50 .infoTable tr > td:nth-of-type(4)::before {
+		content: "申込金額(申込口数)";
+	}
+
+	.MY50 .infoTable tr > td:nth-of-type(5)::before {
+		content: "当選金額(当選口数)";
+	}
+
+	.MY50 .infoTable tr > td:nth-of-type(6)::before {
+		content: "抽選日";
+	}
+
+	.MY50 .infoTable tr > td:nth-of-type(7)::before {
+		content: "キャンセル日";
+	}
+
+	.MY50 .infoTable tr td.tag {
+		margin-bottom: 3.5em;
+		position: unset;
+		width: 7.5rem;
+	}
+
+	.MY50 .infoTable tr td.tag {
+		margin-bottom: 3.5em;
+		position: unset;
+		width: 7.5rem;
+	}
+
+	.MY50 .infoTable tr td.name {
+		position: absolute;
+		top: 2.3em;
+		font-weight: bold;
+	}
+
+	.MY50 .infoTable tr td.tag.yet {
+		background-color: #BB353F;
+	}
+
+	.MY50 .infoTable tr td.tag.win {
+		background-color: #006711;
+	}
+
+	.MY50 .infoTable tr td.tag.lost {
+		background-color: #000;
+	}
+
+	.MY50 .infoTable tr td.tag.cancel {
+		background-color: #8A8A8A;
+	}
+
+	.MY50 .infoTable tr td .compBtn {
+		margin-top: 1rem;
+		width: 100%;
+		height: 4rem;
+	}
+
+	.MY50 .infoTable tr td .compBtn::before {
+		content: "申込";
+	}
+
+	/* alert */
+	.MY50 .alert .box h2 {
+		margin-top: 3rem;
+	}
+
+	.MY50 .alert .box p {
+		margin: 2rem;
+	}
+
+	.MY50 .alert .box p > span {
+		display: block;
+		margin-left: 0;
+	}
+
+	.MY50 .alert .box .singleButton {
+		width: 16rem;
+	}
+}
+
+
+
+/* --------------------------------
+	MY60
+-------------------------------- */
+.MY60 .message .messageList ul {
+	margin-bottom: ;
+}
+.MY60 .message .messageList ul li {
+	padding-bottom: 1.7rem;
+	border-bottom: .1rem solid #C4C4C4;
+}
+
+.MY60 .message .messageList ul li + li {
+	margin-top: 2.2rem;
+}
+
+.MY60 + footer {
+	margin-top: 7rem;
+}
+
+@media (max-width: 769px) {
+	.MY60 .message h3 {
+		margin-top: 3rem;
+		margin-bottom: 3.5rem;
+	}
+
+	.message .messageList .sort {
+		top: -1rem;
+	}
+
+	.MY60 .message .messageList ul li + li {
+		margin-top: 0;
+	}
+}
+
+
+/* --------------------------------
+	MY61
+-------------------------------- */
+.MY61 section h3 {
+	padding: 0 .8rem;
+	line-height: 1.4;
+	font-weight: normal;
+	font-size: 4rem;
+}
+
+.MY61 .contentsBody {
+	margin-top: 2.5rem;
+	padding: 0 .8rem;
+	color: #333;
+	font-size: 1.4rem;
+}
+
+.MY61 .attachment {
+	margin-top: 6rem;
+	color: #333;
+}
+
+.MY61 .attachment a {
+	text-decoration: underline;
+}
+
+@media (max-width: 769px) {
+	.MY61 section h3 {
+		margin-top: 3rem;
+	}
+
+	.MY61 .contentsBody {
+		margin-top: 3.5rem;
+		font-size: 1.4rem;
+	}
+
+	.MY61 .attachment {
+		font-size: 1.4rem;
+	}
+
+	.MY61 .btn {
+		margin-top: 5rem;
+	}
+}
+
+
+/* --------------------------------
+	MY70
+-------------------------------- */
+.MY70 .mv .pageTtl {
+	margin-bottom: 3rem;
+}
+
+.MY70 .mv .lead {
+	font-size: 1.4rem;
+}
+
+.MY70 form {
+	margin-top: 9rem;
+}
+
+@media (max-width: 769px) {
+	.MY70 form {
+		padding: 0;
+	}
+
+	.MY70 form dl dd.hasHead p + p {
+		margin-top: 1rem;
+	}
+
+	.MY70 form dl dd.hasHead p > span + span {
+		margin-left: 1.5rem;
+	}
+
+	.MY70 form dl dd.hasHead p > span:first-of-type {
+		display: inline-block;
+		width: 10rem;
+		font-weight: 600;
+	}
+}

@@ -1,0 +1,686 @@
+@charset "utf-8";
+
+/* --------------------------------
+	top
+-------------------------------- */
+/* ------ mv ------ */
+main .mv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: 5rem;
+	padding-left: 14.4rem;
+	height: 46.5rem;
+	background: url(/assets/img/tp10/mv.jpg) center center / cover no-repeat;
+}
+
+main .mv .pageTtl {
+	padding-top: 0;
+	font-size: 3.6rem;
+	text-shadow: 0 0.3rem 0.25rem #fff;
+	text-align: left;
+}
+
+main .mv .pageTtl > span {
+	margin-top: 0;
+	font-size: 2.4rem;
+}
+
+main .mv .pageTtl + .lead {
+	margin-top: 1rem;
+	padding: 1.2rem;
+	max-width: 65rem;
+	font-size: 2.3rem;
+	font-weight: 600;
+	color: #fff;
+	background-color: #BB353F;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	main .mv {
+		padding: 0 1rem;
+		height: 42rem;
+		background: url(/assets/img/tp10/mv.jpg) -56.5rem center / cover no-repeat;
+	}
+
+	main .mv .pageTtl {
+		padding-bottom: 0;
+		width: 100%;
+		font-size: 3rem;
+		text-align: center;
+	}
+
+	main .mv .pageTtl > span {
+		font-size: 2rem;
+	}
+
+	main .mv .pageTtl + .lead {
+		margin-top: 6.5rem;
+		padding: 1rem 1.5rem;
+		font-size: 2.2rem;
+		line-height: 1.5;
+	}
+}
+
+
+/*	main
+-------------------------------- */
+h3.secTtl {
+	padding: 6rem 0 5rem;
+	color: #000;
+	font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+	font-size: 2.4rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+h3.secTtl > span {
+	display: block;
+	color: #BB353F;
+	font-family: 'Abel', sans-serif;
+	font-weight: 300;
+}
+
+/* status */
+.status > p {
+	background-color: #FFE4E6;
+	height: 4rem;
+}
+
+.status .premiere {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(0, 0, 0, .5);
+	font-weight: 600;
+	border-radius: .4rem;
+}
+
+.status .meter {
+	border-radius: 2rem;
+}
+
+.status .meter .scale {
+	display: flex;
+	align-items: center;
+	padding: 0 2rem;
+	width: 0%;
+	max-width: 100%;
+	height: 100%;
+	color: #FFF;
+	background-color: #BB353F;
+	border-radius: 2rem;
+}
+
+.status .meter .scale::after {
+	content: "%";
+}
+
+@media (max-width: 768px) {
+	h3.secTtl {
+		padding: 4rem 2rem;
+	}
+}
+
+
+/* ------ sec01 ------ */
+.sec01 {
+	padding: 0 18rem;
+}
+
+.sec01 .list > li {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5.5rem;
+}
+
+.sec01 .list > li:first-child {
+	margin-top: 0;
+}
+
+.sec01 .list > li > .pic {
+	position: relative;
+}
+
+.sec01 .list > li > .pic::before {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	width: 12.9rem;
+	height: 4.8rem;
+	color: #fff;
+	background-color: #898989;
+}
+
+.sec01 .list > li > .pic img {
+	width: 46.4rem;
+	border: .1rem solid #E0E0E0
+}
+
+.sec01 .list > li > dl {
+	padding-top: 1rem;
+	width: 53.6rem;
+}
+
+.sec01 .list > li > dl dt {
+	padding-bottom: .5rem;
+	font-size: 2.4rem;
+	font-weight: 600;
+	letter-spacing: 0.15em;
+	border-bottom: .1rem solid #C4C4C4;
+}
+
+.sec01 .list li dl dd > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 1.8rem 0 1.5rem;
+	color: #333;
+	border-bottom: .1rem solid #C4C4C4;
+	line-height: 1;
+}
+
+.sec01 .list li dl dd > div > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.sec01 .list li dl dd > div > div:nth-child(odd) {
+	width: 26rem;
+}
+
+.sec01 .list li dl dd > div > div:nth-child(even) {
+	width: 22rem;
+}
+
+.sec01 .list li dl dd > div p {
+	font-weight: 300;
+}
+
+.sec01 .list li dl dd > div p:nth-of-type(1) {
+	font-weight: 600;
+}
+
+.sec01 .list li dl dd > div p:nth-of-type(2) {
+	font-size: 1.4rem;
+}
+
+.sec01 .list li dl dd .rate p:nth-child(2),
+.sec01 .list li dl dd .period p:nth-child(2) {
+	color: #BB353F;
+}
+
+.sec01 .list li dl dd .rate p span,
+.sec01 .list li dl dd .period p span {
+	font-size: 6.4rem;
+	font-weight: 600;
+}
+
+.sec01 .list li dl dd .recruitment p span,
+.sec01 .list li dl dd .mininvestment p span,
+.sec01 .list li dl dd .subscription p span {
+	font-size: 1.8rem;
+}
+
+.sec01 .list li dl dd .remaining p span {
+	font-size: 2.4rem;
+}
+
+.sec01 .list li dl dd.status {
+	margin-top: 3rem;
+}
+
+.sec01 .btn {
+	margin-top: 9rem;
+}
+
+/* rec_before */
+.sec01 .list li[data-status="rec_before"] > .pic::before {
+	content: "募集前";
+}
+
+.sec01 .list li[data-status="rec_before"] .status .meter {
+	display: none;
+	border-radius: .4rem;
+}
+
+/* rec_invite */
+.sec01 .list li[data-status="rec_invite"] > .pic::before {
+	content: "募集中";
+	background-color: #158F2A;
+}
+
+.sec01 .list li[data-status="rec_invite"] .status .premiere {
+	display: none;
+}
+
+/* rec_underOp */
+.sec01 .list li[data-status="rec_underOp"] > .pic::before {
+	content: "運用中";
+	background-color: #BB353F;
+}
+
+.sec01 .list li[data-status="rec_underOp"] .status .premiere {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.sec01 {
+		padding: 0;
+	}
+
+	.sec01 .list > li {
+		margin-top: 4rem;
+		flex-direction: column;
+	}
+
+	.sec01 .list > li > dl {
+		padding: 3rem;
+		width: 100%;
+	}
+
+	.sec01 .list > li > dl dt {
+		font-size: 2rem;
+		letter-spacing: 0.14em;
+	}
+
+	.sec01 .list li dl dd > div > div:nth-child(odd),
+	.sec01 .list li dl dd > div > div:nth-child(even) {
+		width: 100%;
+	}
+
+	.sec01 .list li dl dd > div:nth-child(n+2) {
+		flex-direction: column;
+	}
+
+	.sec01 .list li dl dd > div:nth-child(n+2) > div + div {
+		margin-top: 1.3rem;
+		padding-top: 1.3rem;
+		border-top: 0.1rem solid #C4C4C4;
+	}
+
+	.sec01 .list li dl dd .rate,
+	.sec01 .list li dl dd .period {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.sec01 .list li dl dd .rate p span,
+	.sec01 .list li dl dd .period p span {
+		font-size: 5rem;
+		line-height: 1.6;
+	}
+
+	.sec01 .btn {
+		margin-top: 5rem;
+	}
+}
+
+
+/* ------ sec02 ------ */
+.sec02 {
+	margin-top: 10rem;
+	padding: 0 19rem;
+}
+
+.sec02 h3.secTtl {
+	padding-bottom: 2rem;
+}
+
+.sec02 .box1 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.sec02 .box1 .pic {
+	width: 36.7rem;
+}
+
+.sec02 .box1 > dl {
+	width: 54.7rem;
+}
+
+.sec02 .box1 > dl dt {
+	font-size: 2.4rem;
+	font-weight: 600;
+}
+
+.sec02 .box1 > dl dd {
+	margin-top: 3.6rem;
+	color: #333;
+	font-weight: 300;
+}
+
+.sec02 .box2 {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 9.5rem;
+}
+
+.sec02 .box2 li {
+	width: calc(87% / 4);
+}
+
+.sec02 .box2 li .pic {
+	margin: 0 auto;
+	width: 20rem;
+}
+
+.sec02 .box2 li dl dt {
+	margin-top: 2.6rem;
+	min-height: 3.4em;
+	font-size: 2.2rem;
+	font-weight: 600;
+	text-align: center;
+	line-height: 1.4;
+}
+
+.sec02 .box2 li dl dd {
+	color: #333;
+}
+
+.sec02 .btn {
+	margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+	.sec02 {
+		margin-top: 5rem;
+		padding: 0;
+	}
+
+	.sec02 .secBody {
+		padding: 0 2rem;
+	}
+
+	.sec02 .box1 {
+		margin-top: 1.5rem;
+		flex-direction: column;
+	}
+
+	.sec02 .box1 .pic {
+		width: 100%;
+		text-align: center;
+	}
+
+	.sec02 .box1 > dl {
+		margin-top: 5rem;
+		width: 100%;
+	}
+
+	.sec02 .box1 > dl dt {
+		font-size: 2rem;
+	}
+
+	.sec02 .box1 > dl dd {
+    margin-top: 1rem;
+	}
+
+	.sec02 .box2 {
+		margin-top: 5rem;
+		flex-wrap: wrap;
+	}
+
+	.sec02 .box2 li {
+		width: 100%;
+	}
+
+	.sec02 .box2 li + li {
+		margin-top: 4rem;
+	}
+
+	.sec02 .box2 li dl dt {
+		margin-bottom: 1rem;
+		font-size: 2rem;
+		min-height: auto;
+	}
+}
+
+
+/* ------ sec03 ------ */
+.sec03 {
+	margin-top: 10rem;
+	padding: 0 20rem;
+}
+
+.sec03 ul {
+	display: flex;
+	justify-content: space-between;
+}
+.sec03 ul li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	padding-top: 1.8rem;
+	width: 24.35rem;
+	min-height: 34rem;
+	background-color: #FFE4E6;
+}
+
+.sec03 ul li::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	z-index: 1;
+}
+
+.sec03 ul li:last-child::before {
+	display: none;
+}
+
+.sec03 ul li .stepNum {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 9rem;
+	height: 9rem;
+	color: #fff;
+	background-color: #BB353F;
+	font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+	font-size: 3.5rem;
+	font-weight: 300;
+	line-height: 1.2;
+	border-radius: 50%;
+}
+
+.sec03 ul li .stepNum::before {
+	content: "Step";
+	display: block;
+	font-size: 2rem;
+}
+
+.sec03 ul li .pic {
+	position: relative;
+	margin-top: auto;
+	margin-bottom: auto;
+	z-index: 2;
+}
+
+.sec03 ul li:nth-child(1) .pic {
+	margin-left: 1rem;
+	width: 13.1rem;
+}
+
+.sec03 ul li:nth-child(2) .pic {
+	width: 20.9rem;
+}
+
+.sec03 ul li:nth-child(3) .pic {
+	width: 17.2rem;
+}
+
+.sec03 ul li:nth-child(4) .pic {
+	width: 12.5rem;
+}
+
+.sec03 ul li .txt {
+	margin-top: 1.5rem;
+	font-size: 2rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.sec03 ul li .txt .note {
+	display: block;
+	margin-top: .8rem;
+	color: #333;
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
+.sec03 .btn {
+	margin-top: 6rem;
+}
+
+@media (min-width: 769px) {
+	.sec03 ul li::before {
+		border-style: solid;
+		top: 50%;
+		right: -2.2rem;
+		margin-top: -1.8rem;
+		border-width: 1.8rem 0 1.8rem 2.2rem;
+		border-color: transparent transparent transparent #ffe4e6;
+	}
+}
+
+@media (max-width: 768px) {
+	.sec03 {
+		margin-top: 4rem;
+		padding: 0;
+	}
+
+	.sec03 .secBody {
+		padding: 0 2rem;
+	}
+	
+	.sec03 ul {
+		flex-wrap: wrap;
+	}
+
+	.sec03 ul li {
+		align-items: flex-start;
+		padding-bottom: 3rem;
+		width: 100%;
+		min-height: auto;
+	}
+
+	.sec03 ul li + li {
+		margin-top: 3.5rem;
+	}
+
+	.sec03 ul li::before {
+		border-style: solid;
+		bottom: -2.4rem;
+		left: 50%;
+    margin-left: -3.9rem;
+		border-width: 5.4rem 3.9rem 0 3.9rem;
+		border-color: #ffe4e6 transparent transparent transparent;
+	}
+
+	.sec03 ul li .stepNum {
+		position: absolute;
+		top: 1.3rem;
+		left: 1rem;
+		width: 7.4rem;
+		height: 7.4rem;
+		font-size: 2.5rem;
+	}
+
+	.sec03 ul li .stepNum::before {
+		font-size: 1.6rem;
+	}
+
+	.sec03 ul li .txt,
+	.sec03 ul li .pic {
+		margin-left: 12rem;
+		text-align: left;
+	}
+
+	.sec03 ul li .pic {
+		margin-top: 1.5rem;
+	}
+
+	.sec03 ul li:nth-child(1) .pic {
+		margin-left: 14rem;
+		width: 11.7rem;
+	}
+
+	.sec03 ul li:nth-child(2) .pic {
+		width: 18.4rem;
+	}
+
+	.sec03 ul li:nth-child(3) .pic {
+		width: 15.7rem;
+	}
+
+	.sec03 ul li:nth-child(4) .pic {
+		margin-left: 13.5rem;
+		width: 10rem;
+	}
+
+	.sec03 ul li .txt {
+		font-size: 1.8rem;
+	}
+
+	.sec03 .btn {
+		margin-top: 4rem;
+	}
+}
+
+
+/* ------ sec04 ------ */
+.sec04 {
+	margin-top: 10rem;
+	padding: 0 20rem;
+}
+
+.sec04 li {
+	display: flex;
+	padding: 2rem 0 1.6rem;
+	border-bottom: .1rem solid #C4C4C4;
+}
+
+.sec04 .day {
+	width: 18rem;
+	font-weight: 600;
+}
+
+.sec04 .ttl {
+	color: #333;
+}
+
+.sec04 .btn {
+	margin-top: 6rem;
+}
+
+@media (max-width: 768px) {
+	.sec04 {
+		margin-top: 2rem;
+		padding: 0;
+	}
+
+	.sec04 h3.secTtl {
+		padding-bottom: 1rem;
+	}
+
+	.sec04 .secBody {
+		padding: 0 2rem;
+	}
+
+	.sec04 li {
+		flex-direction: column;
+		padding: 1.6rem 0 1.3rem;
+	}
+	
+	.sec04 .btn {
+		margin-top: 4.5rem;
+	}
+}

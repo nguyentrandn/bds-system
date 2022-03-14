@@ -1,0 +1,596 @@
+.mv {
+  height: 15.8rem;
+}
+.mv .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.mv h1 {
+  font-size: 2.4rem;
+  line-height: 2;
+}
+.mv .inner::after {
+  content: "";
+  display: block;
+  width: 19rem;
+  height: 1px;
+  background: #BB353F;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.content .main {
+  width: 73rem;
+}
+
+.content .main .img .slide {
+  width: 100%;
+  height: 47rem;
+  margin-bottom: 1.2rem;
+}
+.content .main .img .slide li img {
+  display: block;
+  width: 100%;
+  height: 47rem;
+  object-fit: cover;
+}
+
+.content .thumbnail {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.content .thumbnail li {
+  width: 17rem;
+  height: 12rem;
+}
+
+.aside {
+  width: 42.4rem;
+}
+.aside .detail h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background: #BB353F;
+  color: #fff;
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.aside dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.aside dl dt,
+.aside dl dd {
+  display: flex;
+  align-items: center;
+  min-height: 8.4rem;
+  border-bottom: 1px solid #C4C4C4;
+  padding: .8rem 0;
+}
+.aside dl dt {
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: bold;
+  width: 10rem;
+}
+.aside dl dd {
+  justify-content: flex-end;
+  color: #333;
+  font-size: 1.6rem;
+  width: calc(100% - 10rem);
+  text-align: right;
+}
+.aside dl dd .num,
+.aside dl dd .unit {
+  color: #BB353F;
+}
+.aside dl dd .num {
+  font-weight: bold;
+  font-size: 3.0rem;
+}
+.aside dl dd .unit {
+  font-size: 2.0rem;
+}
+
+.aside .requireState {
+  margin-top: 9.8rem;
+}
+.aside .requireState h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3.6rem;
+}
+
+.aside dl dt.recruitmentreperiod {
+  align-items: end;
+  width: 100%;
+  border: none;
+  min-height: 5rem;
+}
+.aside dl dd.recruitmentreperiod {
+  width: 100%;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 7rem;
+  padding-top: 0;
+}
+
+/* status */
+.status {
+  margin-bottom: 2.0rem;
+}
+.status > p {
+	background-color: #FFE4E6;
+	height: 4rem;
+}
+
+.status .premiere {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+	font-weight: 600;
+	border-radius: .4rem;
+}
+
+.status .meter {
+	border-radius: 2rem;
+}
+
+.status .meter .scale {
+	display: flex;
+	align-items: center;
+	padding: 0 2rem;
+	width: 0%;
+	max-width: 100%;
+	height: 100%;
+	color: #FFF;
+	background-color: #BB353F;
+	border-radius: 2rem;
+}
+
+.status .meter .scale::after {
+	content: "%";
+}
+
+.aside .requireState dl dt {
+  width: 13rem;
+}
+.aside .requireState dl dd {
+  width: calc(100% - 13rem);
+}
+
+.aside .apply {
+  margin-top: 5.6rem;
+}
+.aside .apply h2 {
+  margin-bottom: 2rem;
+}
+.aside .apply .form {
+  background: #FFE4E6;
+  padding: 3.8rem 2.7rem 2.7rem;
+}
+.aside .apply .form .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+}
+.aside .apply .form .row + .row {
+  margin-top: 1.5rem;
+}
+.aside .apply .form .title {
+  font-weight: bold;
+}
+.aside .apply .form select,
+.aside .apply .form input[type="text"] {
+  width: 19rem;
+  height: 4.6rem;
+  background: #fff;
+  border: 1px solid #878783;
+  padding: .5em;
+  border-radius: .3rem;
+}
+.aside .apply .form .input {
+  position: relative;
+  width: 19rem;
+  height: 4.6rem;
+  margin-left: 4rem;
+}
+.aside .apply .form .input.select::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1.5rem;
+  margin: auto;
+  display: block;
+  width: 1.4rem;
+  height: .7rem;
+  pointer-events: none;
+  background: url('/assets/img/fund/apply_arrow.png') center center / contain no-repeat;
+}
+
+.aside .links {
+  margin-top: 2.4rem;
+}
+.aside .links ul {
+  font-size: 1.8rem;
+}
+.aside .links ul li + li {
+  margin-top: 1.0rem;
+}
+.aside .links .notice {
+  font-size: 1.2rem;
+  margin-top: 1.0rem;
+}
+.aside .form button.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 29.7rem;
+  height: 5rem;
+  margin: 5rem auto 0;
+  background: #BB353F;
+  color: #fff;
+  font-weight: bold;
+  border-radius: .5rem;
+}
+.aside .form button.submit.disabled {
+  pointer-events: none;
+  background: #878787;
+}
+
+.text .tabs {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.text .tabs label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16.6666%;
+  height: 7.6rem;
+  border-bottom: 1px solid #898989;
+  font-size: 1.8rem;
+}
+.text .contents .tab {
+  display: none;
+}
+
+#tab1:checked ~ .tabs label:nth-child(1),
+#tab2:checked ~ .tabs label:nth-child(2),
+#tab3:checked ~ .tabs label:nth-child(3),
+#tab4:checked ~ .tabs label:nth-child(4),
+#tab5:checked ~ .tabs label:nth-child(5),
+#tab6:checked ~ .tabs label:nth-child(6) {
+  font-weight: bold;
+}
+#tab1:checked ~ .tabs label:nth-child(1)::after,
+#tab2:checked ~ .tabs label:nth-child(2)::after,
+#tab3:checked ~ .tabs label:nth-child(3)::after,
+#tab4:checked ~ .tabs label:nth-child(4)::after,
+#tab5:checked ~ .tabs label:nth-child(5)::after,
+#tab6:checked ~ .tabs label:nth-child(6)::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: .4rem;
+  display: block;
+  background: #BB353F;
+}
+#tab1:checked ~ .contents .tab:nth-child(1),
+#tab2:checked ~ .contents .tab:nth-child(2),
+#tab3:checked ~ .contents .tab:nth-child(3),
+#tab4:checked ~ .contents .tab:nth-child(4),
+#tab5:checked ~ .contents .tab:nth-child(5),
+#tab6:checked ~ .contents .tab:nth-child(6) {
+  display: block;
+}
+
+.tab {
+  padding: 3.8rem 2.4rem;
+}
+
+.property h3 {
+ height: 4rem;
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ background: #BB353F;
+ color: #fff;
+ padding: 0 2rem;
+}
+.property * + h3 {
+  margin-top: 3.4rem;
+}
+
+.property dl {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.property dl dt,
+.property dl dd {
+  border-bottom: 1px solid #C4C4C4;
+  font-size: 1.4rem;
+  padding: 1.4rem 2.4rem;
+}
+.property dl dt {
+  width: 12rem;
+  font-weight: bold;
+}
+.property dl dd {
+  width: calc(100% - 12rem);
+}
+.property .map {
+  width: 58rem;
+  height: 34rem;
+  margin: 2.4rem auto 0;
+}
+
+.scheme h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+.scheme table {
+  width: 100%;
+  margin-bottom: 2.8rem;
+}
+.scheme table th {
+  height: 6.3rem;
+  background: #BB353F;
+  color: #fff;
+  vertical-align: middle;
+}
+
+.scheme table th,
+.scheme table td {
+  border: 1px solid #000;
+  padding: 1.2rem;
+}
+.scheme table td:nth-child(1) {
+  width: 14.5rem;
+}
+.scheme p {
+  font-size: 1.4rem;
+  margin-bottom: 3.5rem;
+}
+.scheme img + img {
+  margin-top: 7.4rem;
+}
+
+.risk h3 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid #BB353F;
+  margin-bottom: 1.8rem;
+}
+.risk p {
+  font-size: 1.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.sales table {
+  width: 100%;
+}
+.sales table th,
+.sales table td {
+  padding: 2rem 0;
+  border: 1px solid #C4C4C4;
+  border-width: 1px 0;
+}
+.sales table th {
+  width: 13rem;
+}
+
+.faq ul li {
+  border-bottom: 1px solid #C4C4C4;
+  padding-bottom: .8rem;
+}
+.faq ul li + li {
+  margin-top: 1.2rem;
+}
+.faq ul li h3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+.faq ul li h3::before {
+  content: "";
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background: url('/assets/img/fund/q.png') center center / contain no-repeat;
+  margin-right: .8rem;
+  flex-shrink: 0;
+}
+.faq ul li .answer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 1.3rem;
+}
+.faq ul li .answer::before {
+  content: "";
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background: url('/assets/img/fund/a.png') center center / contain no-repeat;
+  flex-shrink: 0;
+  margin-right: 2rem;
+}
+.faq ul li .answer a {
+  color: #007AFE;
+  text-decoration: underline;
+}
+
+/* alert login */
+.alert.login .box h2 {
+  color: #000;
+}
+.alert.login .box .buttons {
+  width: 44rem;
+}
+.alert.login .box .buttons > * {
+  width: 20rem;
+  font-size: 1.5rem;
+  background: #BB353F;
+}
+.alert.login .box .buttons > *:nth-child(2) {
+  background: #F18E00;
+}
+.alert.login .box .buttons > *::before {
+  content: "";
+  display: inline-block;
+  margin-right: .6rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: url('/assets/img/fund/alert_login_01.png') center center / contain no-repeat;
+}
+.alert.login .box .buttons > *:nth-child(2):before {
+  background: url('/assets/img/fund/alert_login_02.png') center center / contain no-repeat;
+}
+
+@media (max-width: 768px) {
+  .mv {
+    height: 13.5rem;
+  }
+
+  .mv .inner::after {
+    width: 35rem;
+  }
+
+  .mv h1 {
+    line-height: 1.5;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+
+  .content {
+    flex-direction: column;
+    position: relative;
+    padding: 0 2rem;
+  }
+
+  .content .main {
+    width: 100%;
+  }
+
+  .content .main .img {
+    margin-bottom: 50rem;
+  }
+
+  .content .main .img .slide {
+    height: 24rem;
+  }
+
+  .content .thumbnail li {
+    width: 8.2rem;
+    height: 5.8rem;
+  }
+
+  .content .main .img .slide li img {
+    height: 24rem;
+  }
+
+  .text .tabs label {
+    height: 5rem;
+    font-size: 1.1rem;
+    letter-spacing: 0;
+  }
+
+  .tab {
+    padding: 2rem 0;
+  }
+
+  .property dl dd {
+    font-size: 1.3rem;
+  }
+
+  .property dl dd {
+    padding-left: 0;
+  }
+
+  .property .map {
+    width: 100%;
+  }
+
+  .sales table th {
+    width: 8rem;
+  }
+
+  .aside {
+    width: 100%;
+  }
+
+  .aside h2,
+  .aside .requireState h2 {
+    margin-top: 2rem;
+    margin-bottom: 1.8rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .aside .detail {
+    position: absolute;
+    top: 36.5rem;
+    width: 35rem;
+  }
+
+  .status > p {
+    height: 3rem;
+  }
+
+  .aside .requireState {
+    margin-top: 2rem;
+  }
+
+  .aside .apply {
+    margin-top: 3.6rem;
+  }
+  
+  .aside dl dt, .aside dl dd {
+    min-height: 6.4rem;
+  }
+
+  .aside dl dt {
+    font: 1.4rem;
+  }
+
+  .aside dl dd {
+    font-size: 1.3rem;
+  }
+
+  .alert .box dl {
+    width: 100%;
+  }
+
+  .alert.login .box .buttons {
+    width: 100%;
+  }
+
+  .alert.login .box .buttons > * {
+    width: 15rem;
+  }
+}

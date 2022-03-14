@@ -1,0 +1,27 @@
+<?php
+
+return [
+    "1"     => "assets/images/hobbies/ゲーム.svg",
+    "2"     => "assets/images/hobbies/アニメ:マンガ.svg",
+    "3"     => "assets/images/hobbies/映画.svg",
+	"4"     => "assets/images/hobbies/写真:カメラ.svg",
+	"5"     => "assets/images/hobbies/ファッション.svg",
+	"6"     => "assets/images/hobbies/お笑い.svg",
+	"7"     => "assets/images/hobbies/読書.svg",
+    "8"     => "assets/images/hobbies/アート:美術館.svg",
+    "9"     => "assets/images/hobbies/ミュージカル:舞台.svg",
+    "10"    => "assets/images/hobbies/スポーツ.svg",
+	"11"    => "assets/images/hobbies/ジム.svg",
+	"12"    => "assets/images/hobbies/フィットネス:ヨガ.svg",
+	"13"    => "assets/images/hobbies/音楽.svg",
+    "14"    => "assets/images/hobbies/ライブ:フェス.svg",
+	"15"    => "assets/images/hobbies/料理.svg",
+	"16"    => "assets/images/hobbies/お酒.svg",
+	"17"    => "assets/images/hobbies/スイーツ.svg",
+    "18"    => "assets/images/hobbies/温泉.svg",
+	"19"    => "assets/images/hobbies/旅行.svg",
+	"20"    => "assets/images/hobbies/アウトドア.svg",
+	"21"    => "assets/images/hobbies/インドア.svg",
+	"22"    => "assets/images/hobbies/ダーツ:ビリヤード.svg",
+	"23"    => "assets/images/hobbies/車:バイク.svg",
+];

@@ -1,0 +1,330 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel OpenApi Demo Documentation",
+        "description": "L5 Swagger OpenApi description",
+        "contact": {
+            "email": "admin@admin.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000",
+            "description": "Demo API Server"
+        }
+    ],
+    "paths": {
+        "/api/coupon.detail.{id}": {
+            "get": {
+                "tags": [
+                    "COUPON"
+                ],
+                "summary": "Coupon Detail",
+                "description": "Coupon Detail",
+                "operationId": "detailCoupon",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Coupon ID",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful completion"
+                    },
+                    "500": {
+                        "description": "Server error"
+                    }
+                }
+            }
+        },
+        "/api/coupon.create": {
+            "post": {
+                "tags": [
+                    "COUPON"
+                ],
+                "summary": "Create Coupon",
+                "description": "Create Coupon",
+                "operationId": "create",
+                "requestBody": {
+                    "description": "Input data format",
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [
+                                    "name",
+                                    "coupon_code",
+                                    "discount_amount",
+                                    "discount_type",
+                                    "plan_detail_id",
+                                    "from_validity_date",
+                                    "to_validity_date",
+                                    "available_months"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "description": " Coupon name ",
+                                        "type": "string"
+                                    },
+                                    "coupon_code": {
+                                        "description": " Coupon code ",
+                                        "type": "string"
+                                    },
+                                    "discount_amount": {
+                                        "description": " Coupon discount amount ",
+                                        "type": "float"
+                                    },
+                                    "discount_type": {
+                                        "description": " Coupon discount type ",
+                                        "type": "string"
+                                    },
+                                    "plan_detail_id": {
+                                        "description": " Target plan ",
+                                        "type": "integer"
+                                    },
+                                    "from_validity_date": {
+                                        "description": " From validity date ",
+                                        "type": "date"
+                                    },
+                                    "to_validity_date": {
+                                        "description": " To validity date ",
+                                        "type": "date"
+                                    },
+                                    "available_months": {
+                                        "description": " Available months ",
+                                        "type": "integer"
+                                    },
+                                    "creator_id": {
+                                        "description": " Creator coupon ",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful completion"
+                    },
+                    "400": {
+                        "description": "Error Validation"
+                    }
+                }
+            }
+        },
+        "/api/coupon.update.{id}": {
+            "post": {
+                "tags": [
+                    "COUPON"
+                ],
+                "summary": "Update Coupon",
+                "description": "Update Coupon",
+                "operationId": "update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Coupon ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Input data format",
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "description": " Coupon name ",
+                                        "type": "string"
+                                    },
+                                    "coupon_code": {
+                                        "description": " Coupon code ",
+                                        "type": "string"
+                                    },
+                                    "discount_amount": {
+                                        "description": " Coupon discount amount ",
+                                        "type": "float"
+                                    },
+                                    "discount_type": {
+                                        "description": " Coupon discount type ",
+                                        "type": "string"
+                                    },
+                                    "plan_detail_id": {
+                                        "description": " Target plan ",
+                                        "type": "integer"
+                                    },
+                                    "from_validity_date": {
+                                        "description": " From validity date ",
+                                        "type": "date"
+                                    },
+                                    "to_validity_date": {
+                                        "description": " To validity date ",
+                                        "type": "date"
+                                    },
+                                    "available_months": {
+                                        "description": " Available months ",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful completion"
+                    },
+                    "400": {
+                        "description": "Error Validation"
+                    },
+                    "401": {
+                        "description": "Client error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "500": {
+                        "description": "Server error"
+                    }
+                }
+            }
+        },
+        "/api/coupon.search": {
+            "post": {
+                "tags": [
+                    "COUPON"
+                ],
+                "summary": "Search Coupon",
+                "description": "Search Coupon",
+                "operationId": "search",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": " Coupon name ",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "coupon_code",
+                        "in": "query",
+                        "description": " Coupon code ",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "plan_master_id",
+                        "in": "query",
+                        "description": " Target plan ",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "from_validity_date",
+                        "in": "query",
+                        "description": " From validity date ",
+                        "required": false,
+                        "schema": {
+                            "type": "date"
+                        }
+                    },
+                    {
+                        "name": "to_validity_date",
+                        "in": "query",
+                        "description": " To validity date ",
+                        "required": false,
+                        "schema": {
+                            "type": "date"
+                        }
+                    },
+                    {
+                        "name": "from_created_date",
+                        "in": "query",
+                        "description": " From created date ",
+                        "required": false,
+                        "schema": {
+                            "type": "date"
+                        }
+                    },
+                    {
+                        "name": "to_created_date",
+                        "in": "query",
+                        "description": " To created date ",
+                        "required": false,
+                        "schema": {
+                            "type": "date"
+                        }
+                    },
+                    {
+                        "name": "creator_name",
+                        "in": "query",
+                        "description": " Creator name ",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful completion"
+                    },
+                    "400": {
+                        "description": "Client error"
+                    },
+                    "401": {
+                        "description": "Client error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "500": {
+                        "description": "Server error"
+                    }
+                }
+            }
+        },
+        "/": {
+            "get": {
+                "description": "Home page",
+                "responses": {
+                    "default": {
+                        "description": "Welcome page"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Projects",
+            "description": "API Endpoints of Projects"
+        }
+    ],
+    "security": [
+        []
+    ]
+}

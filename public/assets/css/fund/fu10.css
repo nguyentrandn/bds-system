@@ -1,0 +1,371 @@
+.mv {
+  height: 16.4rem;
+}
+.mv .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.mv h1 {
+  font-size: 2.4rem;
+}
+.mv span {
+	font-family: 'Abel', sans-serif;
+  color: #BB353F;
+	font-weight: 300;
+}
+.list {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.list ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 104rem;
+  margin: 0 auto;
+}
+.list ul::before,
+.list ul::after {
+  content: "";
+  width: 32rem;
+  height: 0;
+  display: block;
+  order: 99;
+}
+.list ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 32rem;
+  margin-bottom: 4.6rem;
+}
+
+.list ul li .img {
+  width: 100%;
+  height: 23rem;
+  position: relative;
+}
+.list ul li .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list li .img::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 9rem;
+  height: 3.4rem;
+  color: #fff;
+  background-color: #898989;
+  font-size: 1.6rem;
+}
+
+/* rec_before */
+.list li[data-status="rec_before"] > .img::before {
+	content: "募集前";
+}
+
+.list li[data-status="rec_before"] .status .meter {
+	display: none;
+	border-radius: .4rem;
+}
+
+/* rec_invite */
+.list li[data-status="rec_invite"] > .img::before {
+	content: "募集中";
+	background-color: #158F2A;
+}
+
+.list li[data-status="rec_invite"] .status .premiere {
+	display: none;
+}
+
+/* rec_underOp */
+.list li[data-status="rec_underOp"] > .img::before {
+	content: "運用中";
+	background-color: #BB353F;
+}
+
+.list li[data-status="rec_underOp"] .status .premiere {
+	display: none;
+}
+
+/* status */
+.status {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+.status > p {
+	background-color: #FFE4E6;
+	height: 2.4rem;
+}
+
+.status .premiere {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(0, 0, 0, .56);
+	font-weight: 600;
+	border-radius: .4rem;
+}
+
+.status .meter {
+	border-radius: 2rem;
+}
+
+.status .meter .scale {
+	display: flex;
+	align-items: center;
+	padding: 0 2rem;
+	width: 0%;
+	max-width: 100%;
+	height: 100%;
+	color: #FFF;
+	background-color: #BB353F;
+	border-radius: 2rem;
+}
+
+.status .meter .scale::after {
+	content: "%";
+}
+
+.list li .text .row {
+  padding: .8rem 1rem;
+  border-bottom: 1px solid #C4C4C4;
+}
+.list li .text h2 {
+  font-size: 1.4rem;
+}
+
+.list li .text dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list li .text dl dt {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.list li .text .nums {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list li .text .nums dl {
+  width: 50%;
+}
+.list li .text .nums dl:nth-child(2) {
+  padding-left: 2rem;
+}
+.list li .text .nums dd {
+  color: #BB353F;
+}
+.list li .text .nums dd .num {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.list li .text .nums dd .unit {
+  font-size: 1.6rem;
+}
+.list li .text .more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  font-size: 1.6rem;
+  border: 1px solid #BB353F;
+  border-radius: .5rem;
+  color: #BB353F;
+  margin-top: 1.2rem;
+  transition: .4s;
+}
+.list li .text .more:hover {
+  background-color: #BB353F;
+  opacity: 1;
+  color: #fff;
+}
+
+footer {
+  margin-top: 7rem;
+}
+
+@media (max-width: 768px) {
+  .mv {
+    height: 12rem;
+  }
+  
+  .list {
+    margin-bottom: 0;
+  }
+
+  .list ul {
+    width: 32rem;
+  }
+}
+
+
+
+/* --- operation --- */
+.search {
+	background-color: #fff1f3;
+  padding: 2rem 0rem;
+}
+@media (max-width: 768px) {
+	.search {
+    padding: 2rem 1.5rem;
+	}
+}
+.operation {
+	font-size: 1.6rem;
+  max-width: 104rem;
+  margin: auto;
+}
+
+.operation .dataTtl {
+	margin-right: 4rem;
+}
+
+
+/* field */
+.operation .wrap {
+	display: flex;
+	justify-content: space-between;
+}
+
+img.ui-datepicker-trigger {
+	position: relative;
+	cursor: pointer;
+	margin-left: -3.15rem;
+	padding-right: 0.7rem;
+	width: 2.5rem;
+	vertical-align: middle;
+	box-sizing: content-box;
+}
+
+.operation .wrap .field input,
+.operation .wrap .field select {
+	padding: 0.3rem 1rem;
+	height: 4rem;
+	color: #7B7B7B;
+	background-color: #fff;
+	background-clip: padding-box;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	border: .1rem solid #878783;
+	border-radius: 0.3rem;
+}
+
+.operation .wrap .field select {
+	width: 34.5rem;
+}
+
+.operation .dataTtl {
+	font-weight: 600;
+}
+
+@media (max-width: 768px) {
+	.operation .wrap {
+		flex-direction: column;
+	}
+
+	.operation .wrap > p + p {
+		margin-top: 3rem;
+	}
+
+	.operation .dataTtl + * {
+		display: block;
+		margin-top: .5rem;
+	}
+
+	.operation .buttons {
+		margin-top: 3rem;
+	}
+
+	img.ui-datepicker-trigger {
+		margin-left: -2.5rem;
+		padding-right: 0.5rem;
+		width: 2rem;
+	}
+}
+
+
+/* check */
+/* チェックボックス02 */
+input[type=checkbox] {
+  display: none;
+}
+.checkbox02 {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 30px;
+  position: relative;
+  width: auto;
+}
+.checkbox02::before {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 16px;
+  left: 5px;
+  margin-top: -8px;
+  position: absolute;
+  top: 50%;
+  width: 16px;
+}
+.checkbox02::after {
+  border-right: 6px solid #BB353F;
+  border-bottom: 3px solid #BB353F;
+  content: '';
+  display: block;
+  height: 20px;
+  left: 7px;
+  margin-top: -16px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg);
+  width: 9px;
+}
+input[type=checkbox]:checked + .checkbox02::before {
+  border-color: #666;
+}
+input[type=checkbox]:checked + .checkbox02::after {
+  opacity: 1;
+}
+
+
+/* buttons */
+.operation .buttons {
+	display: flex;
+	justify-content: center;
+	margin-top: 3.5rem;
+}
+
+.operation .buttons .btn {
+	margin: 0;
+	width: 14.5rem;
+	height: 4rem;
+	font-size: 1.4rem;
+}
+
+.operation .buttons .btn + .btn {
+	margin-left: 2rem;
+}
+
+.operation .buttons .clear {
+	color: #fff;
+	background-color: #C3C3C3;
+	border: .2rem solid #C3C3C3;
+}

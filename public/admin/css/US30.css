@@ -1,0 +1,40 @@
+.changepage {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    float: right;
+    margin-top: 18%;
+    /* bottom: 0; */
+}
+
+.page {
+    display: inline;
+}
+
+.changepage .item {
+    padding: 10px;
+    text-align: center;
+    margin: 4px;
+    width: 25px;
+    height: 18px;
+    border-radius: 3px;
+    border: 1px solid #D6D6D6;
+}
+
+.changepage .item:nth-child(1) {
+    margin: 4px 16px;
+}
+
+.changepage .item:nth-child(2) {
+    background: #BB353F;
+    ;
+    color: #fff;
+}
+
+.changepage .item:nth-child(6) {
+    width: 40px;
+}
+
+.changepage .item:nth-child(7) {
+    margin: 4px 16px;
+}

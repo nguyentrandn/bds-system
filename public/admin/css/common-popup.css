@@ -1,0 +1,41 @@
+.modal-footer {
+    justify-content: center;
+}
+
+.popup-cancel-btn {
+    width: 150px;
+    background-color: #F0F0F0;
+    color: #000;
+}
+
+.popup-cancel-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.popup-submit-btn {
+    width: 150px;
+    background-color: #BB353F;
+    color: #fff;
+}
+
+.popup-submit-btn:hover {
+    color: white;
+    background-color: #a53038;
+}
+
+.modal-header h4 {
+    margin-top: 10px;
+}
+
+.modal-header h4 {
+    font-weight: bold;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.modal-footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

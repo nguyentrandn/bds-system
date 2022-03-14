@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: "Hiragino Kaku Gothic Pro", "MS PGothic", sans-serif;
+    width: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    font-size: 0.875rem;
+}
+
+html {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+
+/* phần trên đầu */
+
+.breadcrumb-item a,
+.breadcrumb-item {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 12;
+    background-color: white;
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+.header .top-left {
+    width: 50%;
+    height: inherit;
+    float: left;
+}
+
+.top-left img {
+    width: 20%;
+    padding-left: 5%;
+    padding-top: 0.9375rem;
+}
+
+.header .top-right {
+    width: 50%;
+    height: inherit;
+    float: right;
+}
+
+.admin {
+    float: right;
+}
+
+.admin ul {
+    display: flex;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.admin ul li {
+    list-style: none;
+    padding-right: 10px;
+}
+
+.admin-text {
+    margin-top: 4px;
+}
+
+
+/* phần giữa */
+
+.container-main {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.container-main-item {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+}
+
+.container-main .menu {
+    width: 20%;
+    height: 3000px;
+    position: fixed;
+    margin-top: 4.6%;
+    background-color: rgb(187, 53, 63);
+    z-index: 4;
+    transition: all 0.5s ease 0s;
+}
+
+.container-main .menu.active {
+    width: 5%;
+    transition: all 0.5s ease;
+}
+
+.menu.active .open-img {
+    opacity: 1;
+}
+
+.menu.active .close-img {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.menu .close-img {
+    float: right;
+    padding-right: 20px;
+    padding-top: 8%;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.menu .open-img {
+    position: absolute;
+    width: 61px;
+    height: 30px;
+    left: 55%;
+    top: 18px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.menu .item-menu {
+    margin-top: 20%;
+    width: 100%;
+    position: absolute;
+    height: auto;
+    display: block;
+    padding-left: 0px;
+}
+
+.menu.active .item-menu {
+    margin-top: 30%;
+    width: 100%;
+    position: absolute;
+    height: auto;
+    display: none;
+}
+
+.open-img .fas {
+    font-size: 30px;
+    margin-left: -20px;
+    color: white;
+}
+
+.container-main .conten {
+    height: auto;
+    width: 100%;
+    margin-top: 4.5%;
+    position: relative;
+    z-index: 3;
+}
+
+.item-menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.item-menu li {
+    list-style: none;
+    height: 45px;
+    padding-left: 15%;
+    cursor: pointer;
+    padding-top: 5px;
+    line-height: 2.375rem;
+}
+
+.item-menu li .tooltip {
+    position: absolute;
+    height: 35px;
+    width: 122px;
+    background-color: #F2F2F2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-180%);
+    margin-left: 40%;
+    border-radius: 6px;
+    line-height: 35px;
+    text-align: center;
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.item-menu li:hover .tooltip {
+    transform: translateY(-100%);
+    margin-left: 40%;
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+.item-menu #color-itemmenu {
+    background-color: #E6636D;
+}
+
+.item-menu li a {
+    display: block;
+    width: 100%;
+}
+
+.item-menu li:hover {
+    background-color: #eaa3a9;
+}
+.item-menu li.active {
+    background-color: #E6636D;
+}
+
+.conten .top-conten {
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    margin-left: 5%;
+    /* background-color: brown; */
+    position: fixed;
+    background: white;
+    z-index: 12;
+    padding-left: 19%;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.top-conten .link-top {
+    font-size: 1.125rem;
+    color: black;
+    text-decoration: none;
+    line-height: 40px;
+    padding-left: 5%;
+}
+
+.title-top-conten {
+    height: auto;
+    width: 90%;
+    margin-left: 20%;
+    position: relative;
+    margin-top: 76px;
+}
+
+.title-top-conten .title-recruitment {
+    width: 80%;
+    position: relative;
+    height: 70px;
+    border: 1px solid #c0c0c0;
+    left: 5%;
+}
+
+.recruitment-left {
+    width: 50%;
+    float: left;
+    height: inherit;
+    padding: 22px 23px;
+    display: flex;
+    overflow: hidden;
+}
+
+.nhan-recruitment {
+    position: relative;
+    width: 82px;
+    height: 25px;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    background-color: #D52922;
+}
+
+.nhan-recruitment p {
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.563rem;
+}
+
+.text-recruitment {
+    width: 278px;
+    height: 45px;
+    margin-left: 10%;
+}
+
+.text-recruitment p {
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding-left: 5%;
+}
+
+.recruitment-right {
+    width: 50%;
+    float: right;
+    height: inherit;
+    display: table;
+}
+
+.recruitment-right ul {
+    margin-bottom: 0px;
+    line-height: 33px;
+}
+
+.recruitment-right ul li {
+    display: inline;
+    margin-left: 40%;
+    font-size: 0.875rem;
+}
+
+.recruitment-right span {
+    font-weight: 700;
+}
+
+.menu-conten {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    top: 5%;
+}
+
+.menu-conten ul {
+    display: flex;
+    width: 50%;
+}
+
+.menu-conten ul .color-menu {
+    color: #BB353F;
+    cursor: pointer;
+    border-bottom: 2px solid#BB353F;
+    padding-bottom: 10px;
+}
+
+
+/* .menu-conten ul .color-menu:before {
+    content: "";
+    width: 100px;
+    height: 2px;
+    margin-top: 3%;
+    background: #BB353F;
+    position: absolute;
+} */
+
+.menu-conten ul li {
+    padding: 20px 30px;
+    list-style: none;
+    color: #C3C3C3;
+}
+
+.menu-conten ul li a {
+    color: #C3C3C3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-conten ul li a:hover {
+    color: #9e9e9e;
+}
+
+.menu-conten ul .color-menu:hover {
+    color: #BB353F;
+    cursor: pointer;
+}
+
+.conten .main-conten {
+    width: 100%;
+    /* margin-left: 23%; */
+    padding-left: 20%;
+    /* margin: auto auto 20%; */
+    height: inherit;
+}
+
+
+/*  */
+
+.w30 {
+    /* width: 70%; */
+    height: 2.75rem;
+}

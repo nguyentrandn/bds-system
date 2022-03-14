@@ -1,0 +1,109 @@
+/* ? */
+
+form {
+    margin-top: 5%;
+    background-color: #fff;
+}
+
+.tb {
+    display: grid;
+    width: 100%;
+    text-align: center;
+    padding-right: 3%;
+}
+
+.table {
+    max-height: 400px;
+    margin: 1.813rem;
+    background-color: #F6F6F6;
+}
+
+.table tr th {
+    height: 3rem;
+    background-color: #BB353F;
+    color: #fff;
+    padding: 2%;
+    text-align: center;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.table tr td {
+    border: 1px solid #D6D6D6;
+    border-collapse: collapse;
+    padding: 2%;
+    color: #000000;
+    line-height: 21px;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+    color: #000;
+    /* font-weight: bold; */
+}
+
+.table tr .name {
+    width: 10%;
+    text-align: left;
+    /* background-color: azure; */
+    padding: 2%;
+}
+
+.table td:nth-child(1) {
+    text-align: left;
+    /* padding-left: 14px; */
+}
+
+.table tr .tt {
+    /* background-color: bisque; */
+    width: 10%;
+    text-align: center;
+}
+
+.table tr .time {
+    width: 10%;
+    text-align: center;
+}
+
+.table tr .tbdate {
+    width: 10%;
+    /* background-color: brown; */
+    text-align: left;
+    padding-left: 2%;
+}
+
+.table tr td:nth-child(4) {
+    text-align: left;
+    text-align: 2%;
+}
+
+.table tr .sl {
+    width: 15%;
+    text-align: left;
+    /* background-color: brown; */
+    padding-left: 2%;
+}
+
+.table tr td:nth-child(5) {
+    text-align: left;
+    padding-left: 2%;
+}
+
+.table tr .money {
+    width: 13%;
+    /* background-color: brown; */
+    text-align: right;
+}
+
+.table tr td:nth-child(6) {
+    text-align: right;
+}
+
+.table tr .option {
+    width: 10%;
+    /* background-color: brown; */
+}
+
+
+/* ----------------------------------------------- */
